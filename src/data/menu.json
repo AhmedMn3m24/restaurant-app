@@ -1,0 +1,98 @@
+[
+  {
+    "id": 1,
+    "name": "Classic Beef Burger",
+    "category": "Burgers",
+    "price": 40,
+    "description": "Juicy grilled beef burger with melted cheddar cheese, fresh lettuce, tomato, and our signature sauce.",
+    "image": "/assets/images/menu/biif burger.jpg"
+  },
+  {
+    "id": 2,
+    "name": "Crispy Chicken Burger",
+    "category": "Burgers",
+    "price": 35,
+    "description": "Crispy chicken fillet served in a soft bun with lettuce, pickles, and creamy garlic sauce.",
+    "image": "/assets/images/menu/Chicken Burger.jpg"
+  },
+  {
+    "id": 3,
+    "name": "Margherita Pizza",
+    "category": "Pizza",
+    "price": 50,
+    "description": "Traditional Margherita pizza topped with mozzarella cheese, tomato sauce, and fresh basil.",
+    "image": "/assets/images/menu/Margritaaa.jpg"
+  },
+{
+  "id": 4,
+  "name": "Thai Chicken Pizza",
+  "category": "Pizza",
+  "price": 65,
+  "description": "A delicious Thai-style pizza topped with grilled chicken, colorful vegetables, mozzarella cheese, and a spicy Thai sauce.",
+  "image": "/assets/images/menu/Thai2BChicken2BPizza2.jpg"
+},
+  {
+    "id": 5,
+    "name": "Seafood Pizza",
+    "category": "Pizza",
+    "price": 75,
+    "description": "Delicious seafood pizza topped with shrimp, calamari, mozzarella, and creamy seafood sauce.",
+    "image": "/assets/images/menu/pizza-sefood.jpg"
+  },
+  {
+    "id": 6,
+    "name": "Creamy Alfredo Pasta",
+    "category": "Pasta",
+    "price": 45,
+    "description": "Creamy Alfredo fettuccine with parmesan cheese and a rich homemade white sauce.",
+    "image": "/assets/images/menu/pasta.jpg"
+  },
+  {
+    "id": 7,
+  "name": "Mixed Fruit Juice",
+    "category": "Juices",
+    "price": 50,
+  "description": "Freshly squeezed mixed fruit juice made with a blend of seasonal fruits like orange, grape, and pineapple.",
+    "image": "/assets/images/menu/fruit-juice-1200.webp"
+  },
+  {
+    "id": 8,
+    "name": "Mini Fruit Pizzas",
+    "category": "Desserts",
+    "price": 65,
+    "description": "Mini sweet pizzas topped with fresh seasonal fruits, cream, and a light glaze.",
+    "image": "/assets/images/menu/minifruitpizzas.jpg"
+  },
+  {
+    "id": 9,
+    "name": "Thai Chicken Pizza",
+    "category": "Pizza",
+    "price": 65,
+    "description": "Thai-style pizza with grilled chicken, colorful vegetables, mozzarella cheese, and spicy Thai sauce.",
+    "image": "/assets/images/menu/Thai2BChicken2BPizza2.jpg"
+  },
+  {
+    "id": 10,
+    "name": "Peach Basil Pizza",
+    "category": "Pizza",
+    "price": 70,
+    "description": "A gourmet pizza topped with fresh peaches, basil leaves, mozzarella, and a balsamic glaze.",
+    "image": "/assets/images/menu/peachbasilpizza6c7de.jpg"
+  },
+  {
+    "id": 11,
+    "name": "Double Chicken Sandwich",
+    "category": "Sandwiches",
+    "price": 60,
+    "description": "Double-layer chicken sandwich with melted cheese, crispy lettuce, tomatoes, and special sauce.",
+    "image": "/assets/images/menu/dable-sandwichs.png"
+  },
+  {
+    "id": 12,
+    "name": "Classic Cheese Pizza",
+    "category": "Pizza",
+    "price": 55,
+    "description": "Oven-baked pizza loaded with mozzarella cheese and rich tomato sauce on a crispy crust.",
+    "image": "/assets/images/menu/Pizza2B.jpg"
+  }
+]
