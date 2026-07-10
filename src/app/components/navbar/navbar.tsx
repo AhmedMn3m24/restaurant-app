@@ -12,25 +12,20 @@ export default function Navbar() {
   const counterContext = useContext(CounterContext);
 
   const [isOpen, setIsOpen] = useState(false);
-  
-if (!wishlistContext || !counterContext) return null;
 
-const { wishlist } = wishlistContext;
-const { counter } = counterContext;
+  if (!wishlistContext || !counterContext) return null;
+
+  const { wishlist } = wishlistContext;
+  const { counter } = counterContext;
 
   return (
-    <header className="bg-[#111] shadow-md">
-      <nav className="container mx-auto flex items-center justify-between px-6 py-3 ">
+    <header className="bg-[#111] shadow-md sticky top-0 z-50">
+      <nav className="container mx-auto flex items-center justify-between px-6 py-3">
         <Link href="/">
-          <Image
-            src={logo}
-            alt="Logo"
-            width={120}
-            height={120}
-            priority
-          />
+          <Image src={logo} alt="Logo" width={120} height={120} priority />
         </Link>
 
+        {/* Desktop Menu */}
         <div className="hidden md:flex items-center gap-8">
           <Link href="/" className="text-white hover:text-orange-500">
             Home
@@ -44,7 +39,6 @@ const { counter } = counterContext;
             Contacts
           </Link>
 
-          {/* Cart */}
           <button className="relative">
             <ShoppingCart className="h-7 w-7 text-white" />
 
@@ -55,7 +49,6 @@ const { counter } = counterContext;
             )}
           </button>
 
-          {/* Wishlist */}
           <button className="relative">
             <Heart className="h-7 w-7 text-red-500" />
 
@@ -67,17 +60,64 @@ const { counter } = counterContext;
           </button>
         </div>
 
+        {/* Mobile Toggle */}
         <button
-          className="md:hidden"
+          className="md:hidden text-white"
           onClick={() => setIsOpen(!isOpen)}
         >
-          {isOpen ? (
-            <X className="h-7 w-7 text-white" />
-          ) : (
-            <Menu className="h-7 w-7 text-white" />
-          )}
+          {isOpen ? <X className="h-8 w-8" /> : <Menu className="h-8 w-8" />}
         </button>
       </nav>
+
+      {/* Mobile Menu */}
+      {isOpen && (
+        <div className="md:hidden bg-[#111] border-t border-gray-800 px-6 py-4">
+          <div className="flex flex-col gap-4">
+            <Link
+              href="/"
+              className="text-white hover:text-orange-500"
+              onClick={() => setIsOpen(false)}
+            >
+              Home
+            </Link>{" "}
+            <Link
+              href="/menu"
+              className="text-white hover:text-orange-500"
+              onClick={() => setIsOpen(false)}
+            >
+              Menu
+            </Link>
+            <Link
+              href="/contacts"
+              className="text-white hover:text-orange-500"
+              onClick={() => setIsOpen(false)}
+            >
+              Contacts
+            </Link>
+            <div className="flex items-center gap-6 pt-3">
+              <button className="relative">
+                <ShoppingCart className="h-7 w-7 text-white" />
+
+                {counter > 0 && (
+                  <span className="absolute -right-2 -top-2 flex h-5 w-5 items-center justify-center rounded-full bg-orange-500 text-xs font-bold text-white">
+                    {counter}
+                  </span>
+                )}
+              </button>
+
+              <button className="relative">
+                <Heart className="h-7 w-7 text-red-500" />
+
+                {wishlist.length > 0 && (
+                  <span className="absolute -right-2 -top-2 flex h-5 w-5 items-center justify-center rounded-full bg-red-500 text-xs font-bold text-white">
+                    {wishlist.length}
+                  </span>
+                )}
+              </button>
+            </div>
+          </div>
+        </div>
+      )}
     </header>
   );
 }
